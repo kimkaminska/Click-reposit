@@ -38,4 +38,12 @@ public class LaptopPage extends BasePage {
     public boolean checkURLDellLaptops32GB() {
         return driver.getCurrentUrl().contains("producer=dell");
     }
+
+    public WebElement clickMacOSLaptops() {
+        return getElementByXpath("//a[@data-id='Mac OS']");
+    }
+
+    public boolean checkURLMacOSLaptops() {
+        return driver.getCurrentUrl().contains("notebooks/c80004/20886=6327");
+    }
 }
