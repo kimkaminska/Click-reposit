@@ -46,4 +46,12 @@ public class LaptopPage extends BasePage {
     public boolean checkURLMacOSLaptops() {
         return driver.getCurrentUrl().contains("notebooks/c80004/20886=6327");
     }
+
+    public WebElement clickAsusLaptopsBtn() {
+        return getElementByXpath("//a[@data-id='ASUS']");
+    }
+
+    public boolean checkURLAsusLaptops() {
+        return driver.getCurrentUrl().contains("producer=asus");
+    }
 }
