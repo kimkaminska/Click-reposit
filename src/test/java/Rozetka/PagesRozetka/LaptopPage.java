@@ -18,4 +18,12 @@ public class LaptopPage extends BasePage {
 //        return driver.findElement(By.xpath("//img[@alt='laptops']"));
         return getElementByXpath("//a[@class='tile-cats__heading tile-cats__heading_type_center ng-star-inserted' and @title='Ноутбуки']");
     }
+
+    public WebElement clickAppleLaptopsBtn() {
+        return getElementByXpath("//a[@data-id='Apple']");
+    }
+
+    public boolean checkURLAppleLaptops() {
+        return driver.getCurrentUrl().contains("apple");
+    }
 }
