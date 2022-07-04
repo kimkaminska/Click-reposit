@@ -26,4 +26,16 @@ public class LaptopPage extends BasePage {
     public boolean checkURLAppleLaptops() {
         return driver.getCurrentUrl().contains("apple");
     }
+
+    public WebElement clickDellLaptopsBtn() {
+        return getElementByXpath("//a[@data-id='Dell']");
+    }
+
+    public WebElement cklickDellLaptops32GB() {
+        return getElementByXpath("//a[@data-id='32 ГБ и больше']");
+    }
+
+    public boolean checkURLDellLaptops32GB() {
+        return driver.getCurrentUrl().contains("producer=dell");
+    }
 }
