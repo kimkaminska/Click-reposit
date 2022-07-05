@@ -26,4 +26,8 @@ public class HomePageRozetka extends BasePage {
     public WebElement clickPhones_TVBtn() {
         return driver.findElement(By.xpath("//a[text()= 'Смартфоны, ТВ и электроника']"));
     }
+
+    public WebElement clickBeautyHealthBtn() {
+        return getElementByXpath("//a[text()= 'Красота и здоровье']");
+    }
 }
