@@ -24,4 +24,16 @@ public class PhonesTVPage extends BasePage {
     public boolean checkURLApplePhones13ProMax() {
         return driver.getCurrentUrl().contains("producer=apple;series=113083");
     }
+
+    public WebElement clickSumsungPhonesBtn() {
+        return getElementByXpath("//a[@data-id='Samsung']");
+    }
+
+    public WebElement clickSumsungGalaxyAPhonesBtn() {
+        return getElementByXpath("//a[@data-id='Galaxy A']");
+    }
+
+    public boolean checkURLSumsungGlaxyAPhones() {
+        return driver.getCurrentUrl().contains("producer=samsung;series=galaxy_a");
+    }
 }
