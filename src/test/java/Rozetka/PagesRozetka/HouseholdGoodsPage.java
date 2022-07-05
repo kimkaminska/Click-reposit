@@ -28,4 +28,16 @@ public class HouseholdGoodsPage extends BasePage {
     public boolean checkURlDormeoBlancetsList() {
         return driver.getCurrentUrl().contains("producer=dormeo");
     }
+
+    public WebElement clickCoffeeTeaMakingFacilieties() {
+        return getElementByXpath("//a[@title='Посуда для чая и кофе']");
+    }
+
+    public WebElement clickPorcelainCoffeeTeaMakingFacilitiesBtn() {
+        return getElementByXpath("//a[@data-id='Фарфор']");
+    }
+
+    public boolean checkURLPorcelainCoffeeTeaMakingFacilities() {
+        return driver.getCurrentUrl().contains("material-88504=farfor");
+    }
 }
