@@ -23,4 +23,7 @@ public class HomePageRozetka extends BasePage {
         return getElementByXpath("//*[text()= 'Ноутбуки и компьютеры']");
     }
 
+    public WebElement clickPhones_TVBtn() {
+        return driver.findElement(By.xpath("//a[text()= 'Смартфоны, ТВ и электроника']"));
+    }
 }
