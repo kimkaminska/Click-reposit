@@ -20,4 +20,16 @@ public class BeautyHealthPage extends BasePage {
     public boolean checkURLChanelPerfumes() {
         return driver.getCurrentUrl().contains("producer=chanel");
     }
+
+    public WebElement clickMenPerfumesBtn() {
+        return getElementByXpath("//a[@title='Мужская парфюмерия']");
+    }
+
+    public WebElement clickMenPerfumesHermesBtn() {
+        return getElementByXpath("//a[@data-id='Hermes']");
+    }
+
+    public boolean checkURLMenPerfumesHermes() {
+        return driver.getCurrentUrl().contains("producer=hermes");
+    }
 }
