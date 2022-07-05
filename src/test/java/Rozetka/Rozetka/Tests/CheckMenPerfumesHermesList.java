@@ -7,10 +7,10 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class CheckChanelPerfumesList extends TestInit {
+public class CheckMenPerfumesHermesList extends TestInit {
 
     @Test
-    public void checkChanelPerfumesList() {
+    public void checkMenPerfumesHermesList () {
         HomePageRozetka homePageRozetka = new HomePageRozetka(driver);
         openUrl("https://rozetka.com.ua/");
         sleep(4);
@@ -26,11 +26,11 @@ public class CheckChanelPerfumesList extends TestInit {
         sleep(4);
         BeautyHealthPage beautyHealthPage = new BeautyHealthPage(driver);
         sleep(4);
-        beautyHealthPage.clickPerfumesBtn().click();
+        beautyHealthPage.clickMenPerfumesBtn().click();
         sleep(4);
-        beautyHealthPage.clickChanelPerfumes().click();
+        beautyHealthPage.clickMenPerfumesHermesBtn().click();
         sleep(4);
 
-        Assert.assertTrue(beautyHealthPage.checkURLChanelPerfumes());
+        Assert.assertTrue(beautyHealthPage.checkURLMenPerfumesHermes());
     }
 }
