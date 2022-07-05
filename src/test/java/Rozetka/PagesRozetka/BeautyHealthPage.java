@@ -32,4 +32,12 @@ public class BeautyHealthPage extends BasePage {
     public boolean checkURLMenPerfumesHermes() {
         return driver.getCurrentUrl().contains("producer=hermes");
     }
+
+    public WebElement clickCosmeticsSetsBtn() {
+        return getElementByXpath("//a[@title='Наборы декоративной косметики']");
+    }
+
+    public boolean checkURLCosmeticsSets() {
+        return driver.getCurrentUrl().contains("nabori-kosmetiki");
+    }
 }
