@@ -4,7 +4,6 @@ import BasePage.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.w3c.dom.html.HTMLInputElement;
 
 public class HomePageRozetka extends BasePage {
     public HomePageRozetka(WebDriver driver) {
@@ -29,5 +28,9 @@ public class HomePageRozetka extends BasePage {
 
     public WebElement clickBeautyHealthBtn() {
         return getElementByXpath("//a[text()= 'Красота и здоровье']");
+    }
+
+    public WebElement clickHouseholdGoodsBtn() {
+        return getElementByXpath("//a[text()= 'Товары для дома']");
     }
 }
