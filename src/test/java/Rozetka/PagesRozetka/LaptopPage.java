@@ -54,4 +54,12 @@ public class LaptopPage extends BasePage {
     public boolean checkURLAsusLaptops() {
         return driver.getCurrentUrl().contains("producer=asus");
     }
+
+    public WebElement clickHPLaptopsBTn() {
+        return getElementByXpath("//a[@data-id='HP']");
+    }
+
+    public boolean checkURLHPLaptops() {
+        return driver.getCurrentUrl().contains("producer=hp-hewlett-packard");
+    }
 }
