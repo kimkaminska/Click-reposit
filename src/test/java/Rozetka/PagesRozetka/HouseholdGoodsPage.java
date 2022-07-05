@@ -16,4 +16,16 @@ public class HouseholdGoodsPage extends BasePage {
     public boolean checkURLHouseholdGoods() {
         return driver.getCurrentUrl().contains("home_textile");
     }
+
+    public WebElement clickBlancetsBtn() {
+        return getElementByXpath("//a[@title='Одеяла']");
+    }
+
+    public WebElement clickDormeoBlancetsBtn() {
+        return getElementByXpath("//a[@data-id='Dormeo']");
+    }
+
+    public boolean checkURlDormeoBlancetsList() {
+        return driver.getCurrentUrl().contains("producer=dormeo");
+    }
 }
