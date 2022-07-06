@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Rozetka Click tests" verbose="1" >
+    <test name="UITests">
+        <classes>
+            <class name="Rozetka.Rozetka.Tests.CheckAppleIPhones13ProMaxList" />
+            <class name="Rozetka.Rozetka.Tests.CheckCosmeticsSetsList" />
+            <class name="Rozetka.Rozetka.Tests.CheckDormeoBlancetsLists" />
+            <class name="Rozetka.Rozetka.Tests.CheckHouseholdGoodsList" />
+            <class name="Rozetka.Rozetka.Tests.CheckPorcelainCoffeeTeaMakingFacilitiesList" />
+            <class name="Rozetka.Rozetka.Tests.CheckAppleLeptopsList" />
+            <class name="Rozetka.Rozetka.Tests.CheckAsusLaptopsList" />
+            <class name="Rozetka.Rozetka.Tests.CheckChanelPerfumesList" />
+            <class name="Rozetka.Rozetka.Tests.CheckDellLaptops32GBList" />
+            <class name="Rozetka.Rozetka.Tests.CheckHPLaptopsList" />
+            <class name="Rozetka.Rozetka.Tests.CheckLaptopList" />
+            <class name="Rozetka.Rozetka.Tests.CheckLenovoLeptopsList" />
+            <class name="Rozetka.Rozetka.Tests.CheckMacOSLaptops" />
+            <class name="Rozetka.Rozetka.Tests.CheckMenPerfumesHermesList" />
+            <class name="Rozetka.Rozetka.Tests.CheckSumsungGalaxyAPhonesList" />
+        </classes>
+    </test>
+</suite>
