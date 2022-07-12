@@ -1,0 +1,72 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="AllTest" parallel="tests" thread-count="1" >
+
+    <test verbose="1" name="testing-chrome" annotations="JDK">
+        <parameter name="driver-name" value="chrome"/>
+
+        <classes>
+            <class name="Rozetka.Rozetka.Tests.CheckMenPerfumesHermesList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckLenovoLeptopsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckDellLaptops32GBList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckSumsungGalaxyAPhonesList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckMacOSLaptops"/>
+            <class name="Rozetka.Rozetka.Tests.CheckLaptopList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckChanelPerfumesList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckAsusLaptopsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckAppleLeptopsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckPorcelainCoffeeTeaMakingFacilitiesList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckHouseholdGoodsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckDormeoBlancetsLists"/>
+            <class name="Rozetka.Rozetka.Tests.CheckCosmeticsSetsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckAppleIPhones13ProMaxList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckHPLaptopsList"/>
+        </classes>
+
+    </test>
+
+    <test verbose="1" name="testing-firefox" annotations="JDK">
+        <parameter name="driver-name" value="firefox"/>
+
+        <classes>
+            <class name="Rozetka.Rozetka.Tests.CheckMenPerfumesHermesList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckLenovoLeptopsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckDellLaptops32GBList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckSumsungGalaxyAPhonesList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckMacOSLaptops"/>
+            <class name="Rozetka.Rozetka.Tests.CheckLaptopList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckChanelPerfumesList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckAsusLaptopsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckAppleLeptopsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckPorcelainCoffeeTeaMakingFacilitiesList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckHouseholdGoodsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckDormeoBlancetsLists"/>
+            <class name="Rozetka.Rozetka.Tests.CheckCosmeticsSetsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckAppleIPhones13ProMaxList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckHPLaptopsList"/>
+        </classes>
+
+    </test>
+
+    <test verbose="1" name="testing-opera" annotations="JDK">
+        <parameter name="driver-name" value="opera"/>
+
+        <classes>
+            <class name="Rozetka.Rozetka.Tests.CheckMenPerfumesHermesList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckLenovoLeptopsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckDellLaptops32GBList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckSumsungGalaxyAPhonesList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckMacOSLaptops"/>
+            <class name="Rozetka.Rozetka.Tests.CheckLaptopList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckChanelPerfumesList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckAsusLaptopsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckAppleLeptopsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckPorcelainCoffeeTeaMakingFacilitiesList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckHouseholdGoodsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckDormeoBlancetsLists"/>
+            <class name="Rozetka.Rozetka.Tests.CheckCosmeticsSetsList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckAppleIPhones13ProMaxList"/>
+            <class name="Rozetka.Rozetka.Tests.CheckHPLaptopsList"/>
+        </classes>
+
+    </test>
+</suite>
