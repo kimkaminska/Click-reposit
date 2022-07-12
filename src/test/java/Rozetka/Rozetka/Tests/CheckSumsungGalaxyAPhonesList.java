@@ -11,25 +11,27 @@ public class CheckSumsungGalaxyAPhonesList extends TestInit {
 
     @Test
     public void checkSumsungGalaxyAPhonesList() {
+
         HomePageRozetka homePageRozetka = new HomePageRozetka(driver);
+        PhonesTVPage phonesTVPage = new PhonesTVPage(driver);
+
         openUrl("https://rozetka.com.ua");
         sleep(4);
-        if (driver.findElements(By.xpath("//span[@class='exponea-close-cross']")).size()>0) {
+        if (driver.findElements(By.xpath("//span[@class='exponea-close-cross']")).size() > 0) {
             driver.findElements(By.xpath("//span[@class='exponea-close-cross']")).get(0).click();
         }
         sleep(4);
-        homePageRozetka.clickMenuBtn().click();
+        homePageRozetka.getMenuBtn().click();
         sleep(4);
-        homePageRozetka.clickCatalogBtn().click();
+        homePageRozetka.getCatalogBtn().click();
         sleep(4);
-        homePageRozetka.clickPhones_TVBtn().click();
+        homePageRozetka.getPhones_TVBtn().click();
         sleep(4);
-        PhonesTVPage phonesTVPage = new PhonesTVPage(driver);
-        phonesTVPage.clickCellphones().click();
+        phonesTVPage.getCellphones().click();
         sleep(4);
-        phonesTVPage.clickSumsungPhonesBtn().click();
+        phonesTVPage.getSumsungPhonesBtn().click();
         sleep(4);
-        phonesTVPage.clickSumsungGalaxyAPhonesBtn().click();
+        phonesTVPage.getSumsungGalaxyAPhonesBtn().click();
         sleep(4);
 
         Assert.assertTrue(phonesTVPage.checkURLSumsungGlaxyAPhones());

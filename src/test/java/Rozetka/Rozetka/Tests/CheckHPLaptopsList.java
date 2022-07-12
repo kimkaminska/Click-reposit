@@ -10,25 +10,26 @@ import org.testng.annotations.Test;
 public class CheckHPLaptopsList extends TestInit {
 
     @Test
-    public void checkHPLaptopsList () {
+    public void checkHPLaptopsList() {
+
         HomePageRozetka homePageRozetka = new HomePageRozetka(driver);
+        LaptopPage laptopPage = new LaptopPage(driver);
+
         openUrl("https://rozetka.com.ua/");
         sleep(4);
-        if (driver.findElements(By.xpath("//span[@class='exponea-close-cross']")).size()>0) {
+        if (driver.findElements(By.xpath("//span[@class='exponea-close-cross']")).size() > 0) {
             driver.findElements(By.xpath("//span[@class='exponea-close-cross']")).get(0).click();
         }
         sleep(4);
-        homePageRozetka.clickMenuBtn().click();
+        homePageRozetka.getMenuBtn().click();
         sleep(4);
-        homePageRozetka.clickCatalogBtn().click();
+        homePageRozetka.getCatalogBtn().click();
         sleep(3);
-        homePageRozetka.clickLaptop_CompBtn().click();
-        sleep(3);
-        LaptopPage laptopPage = new LaptopPage(driver);
+        homePageRozetka.getLaptop_CompBtn().click();
         sleep(4);
-        laptopPage.clickLaptopBtn().click();
+        laptopPage.getLaptopBtn().click();
         sleep(4);
-        laptopPage.clickHPLaptopsBTn().click();
+        laptopPage.getHPLaptopsBTn().click();
         sleep(4);
 
         Assert.assertTrue(laptopPage.checkURLHPLaptops());

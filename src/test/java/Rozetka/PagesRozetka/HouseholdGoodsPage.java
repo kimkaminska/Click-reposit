@@ -9,7 +9,7 @@ public class HouseholdGoodsPage extends BasePage {
         super(driver);
     }
 
-    public WebElement clickHomeTextilesBtn() {
+    public WebElement getHomeTextilesBtn() {
         return getElementByXpath("//a[@title='Домашний текстиль' and @class='tile-cats__heading ng-star-inserted']");
     }
 
@@ -17,11 +17,11 @@ public class HouseholdGoodsPage extends BasePage {
         return driver.getCurrentUrl().contains("home_textile");
     }
 
-    public WebElement clickBlancetsBtn() {
+    public WebElement getBlancetsBtn() {
         return getElementByXpath("//a[@title='Одеяла']");
     }
 
-    public WebElement clickDormeoBlancetsBtn() {
+    public WebElement getDormeoBlancetsBtn() {
         return getElementByXpath("//a[@data-id='Dormeo']");
     }
 
@@ -29,11 +29,11 @@ public class HouseholdGoodsPage extends BasePage {
         return driver.getCurrentUrl().contains("producer=dormeo");
     }
 
-    public WebElement clickCoffeeTeaMakingFacilieties() {
+    public WebElement getCoffeeTeaMakingFacilieties() {
         return getElementByXpath("//a[@title='Посуда для чая и кофе']");
     }
 
-    public WebElement clickPorcelainCoffeeTeaMakingFacilitiesBtn() {
+    public WebElement getPorcelainCoffeeTeaMakingFacilitiesBtn() {
         return getElementByXpath("//a[@data-id='Фарфор']");
     }
 

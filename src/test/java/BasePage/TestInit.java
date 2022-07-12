@@ -7,32 +7,24 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Optional;
+import org.testng.annotations.Parameters;
 
 public class TestInit {
     public WebDriver driver;
-    ChromeOptions options = new ChromeOptions();
+    ChromeOptions optionsChrome = new ChromeOptions();
+    FirefoxOptions optionsFirefox = new FirefoxOptions();
 
 
-    //    put false here if you want to see browser)
+    //    put false here if you want to see browser) true - if not
     boolean headless = false;
-
-
-    @BeforeMethod
-    public void setUp() {
-        WebDriverManager.chromedriver().setup();
-
-        options.setHeadless(headless);
-        driver = new ChromeDriver(options);
-        if (headless) {
-            driver.manage().window().setSize(new Dimension(1920, 1200));
-        } else {
-            driver.manage().window().maximize();
-        }
-    }
 
     @AfterMethod
     public void afterMethod() {
@@ -57,7 +49,7 @@ public class TestInit {
 
     int BASIC_TIME = 15;
 
-    public void waitTILLELelementContainsText(String locator, String text) {
+    public void waitTILLElementContainsText(String locator, String text) {
         WebDriverWait wait = new WebDriverWait(driver, BASIC_TIME);
         wait.until(ExpectedConditions.textToBePresentInElementLocated(By.xpath(locator), text));
     }
@@ -65,5 +57,41 @@ public class TestInit {
     public WebElement getElementByXpath(String locator) {
         WebDriverWait wait = new WebDriverWait(driver, BASIC_TIME);
         return wait.until(ExpectedConditions.elementToBeClickable(By.xpath(locator)));
+    }
+
+    public WebDriver getDriverByName(String browserType) {
+        WebDriver driver = null;
+        if (browserType.equals("chrome")) {
+            optionsChrome.setHeadless(headless);
+            WebDriverManager.chromedriver().setup();
+            driver = new ChromeDriver(optionsChrome);
+            if (headless) {
+                driver.manage().window().setSize(new Dimension(1920, 1200));
+            } else {
+                driver.manage().window().maximize();
+            }
+        }
+        if (browserType.equals("firefox")) {
+            optionsFirefox.setHeadless(headless);
+            WebDriverManager.firefoxdriver().setup();
+            driver = new FirefoxDriver(optionsFirefox);
+            if (headless) {
+                driver.manage().window().setSize(new Dimension(1920, 1200));
+            } else {
+                driver.manage().window().maximize();
+            }
+        }
+        if (browserType.equals("opera")) {
+            WebDriverManager.operadriver().setup();
+            driver = new OperaDriver();
+            driver.manage().window().maximize();
+        }
+        return driver;
+    }
+
+    @Parameters("driver-name")
+    @BeforeMethod
+    public void startTest(@Optional("chrome") String browserName) throws Exception {
+        driver = getDriverByName(browserName);
     }
 }

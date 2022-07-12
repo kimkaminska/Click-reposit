@@ -9,11 +9,11 @@ public class BeautyHealthPage extends BasePage {
         super(driver);
     }
 
-    public WebElement clickPerfumesBtn() {
+    public WebElement getPerfumesBtn() {
         return getElementByXpath("//a[@title='Женская парфюмерия']");
     }
 
-    public WebElement clickChanelPerfumes() {
+    public WebElement getChanelPerfumes() {
         return getElementByXpath("//a[@data-id='Chanel']");
     }
 
@@ -21,11 +21,11 @@ public class BeautyHealthPage extends BasePage {
         return driver.getCurrentUrl().contains("producer=chanel");
     }
 
-    public WebElement clickMenPerfumesBtn() {
+    public WebElement getMenPerfumesBtn() {
         return getElementByXpath("//a[@title='Мужская парфюмерия']");
     }
 
-    public WebElement clickMenPerfumesHermesBtn() {
+    public WebElement getMenPerfumesHermesBtn() {
         return getElementByXpath("//a[@data-id='Hermes']");
     }
 
@@ -33,7 +33,7 @@ public class BeautyHealthPage extends BasePage {
         return driver.getCurrentUrl().contains("producer=hermes");
     }
 
-    public WebElement clickCosmeticsSetsBtn() {
+    public WebElement getCosmeticsSetsBtn() {
         return getElementByXpath("//a[@title='Наборы декоративной косметики']");
     }
 

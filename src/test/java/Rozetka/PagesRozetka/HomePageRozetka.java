@@ -10,27 +10,27 @@ public class HomePageRozetka extends BasePage {
         super(driver);
     }
 
-    public WebElement clickMenuBtn() {
+    public WebElement getMenuBtn() {
         return driver.findElement(By.xpath("//button[@class='header__button ng-tns-c94-1']"));
     }
 
-    public WebElement clickCatalogBtn() {
+    public WebElement getCatalogBtn() {
         return driver.findElement(By.xpath("//button[@id='fat-menu' and @class='button button--large side-menu__button ng-tns-c94-1']"));
     }
 
-    public WebElement clickLaptop_CompBtn() {
+    public WebElement getLaptop_CompBtn() {
         return getElementByXpath("//*[text()= 'Ноутбуки и компьютеры']");
     }
 
-    public WebElement clickPhones_TVBtn() {
+    public WebElement getPhones_TVBtn() {
         return driver.findElement(By.xpath("//a[text()= 'Смартфоны, ТВ и электроника']"));
     }
 
-    public WebElement clickBeautyHealthBtn() {
+    public WebElement getBeautyHealthBtn() {
         return getElementByXpath("//a[text()= 'Красота и здоровье']");
     }
 
-    public WebElement clickHouseholdGoodsBtn() {
+    public WebElement getHouseholdGoodsBtn() {
         return getElementByXpath("//a[text()= 'Товары для дома']");
     }
 }

@@ -9,15 +9,15 @@ public class PhonesTVPage extends BasePage {
         super(driver);
     }
 
-    public WebElement clickCellphones() {
+    public WebElement getCellphones() {
         return getElementByXpath("//a[@class='tile-cats__heading tile-cats__heading_type_center ng-star-inserted' and @title='Мобильные телефоны']");
     }
 
-    public WebElement clickApplePhonesBtn() {
+    public WebElement getApplePhonesBtn() {
         return getElementByXpath("//a[@data-id='Apple']");
     }
 
-    public WebElement clickApple13ProMaxBtn() {
+    public WebElement getApple13ProMaxBtn() {
         return getElementByXpath("//a[@data-id='iPhone 13 Pro Max']");
     }
 
@@ -25,11 +25,11 @@ public class PhonesTVPage extends BasePage {
         return driver.getCurrentUrl().contains("producer=apple;series=113083");
     }
 
-    public WebElement clickSumsungPhonesBtn() {
+    public WebElement getSumsungPhonesBtn() {
         return getElementByXpath("//a[@data-id='Samsung']");
     }
 
-    public WebElement clickSumsungGalaxyAPhonesBtn() {
+    public WebElement getSumsungGalaxyAPhonesBtn() {
         return getElementByXpath("//a[@data-id='Galaxy A']");
     }
 
